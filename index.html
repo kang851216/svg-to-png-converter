@@ -6,21 +6,10 @@
 
     <!-- ===== MULTI-LANGUAGE SEO ===== -->
 
-    <!-- English (Default) -->
+    <!-- English (Default) - Title and description are set by JavaScript based on language -->
     <title>SVG to PNG Converter - Free Online Tool | Convert SVG to PNG, JPEG, WebP</title>
-    <meta name="title" content="SVG to PNG Converter - Free Online Tool">
     <meta name="description" content="Free online SVG to PNG converter. Convert SVG files to PNG, JPEG, or WebP images directly in your browser. No upload required, 100% private and secure. Supports batch conversion, adjustable scale, and transparent backgrounds.">
     <meta name="keywords" content="SVG to PNG, SVG converter, image converter, free online tool, SVG to JPEG, SVG to WebP, batch convert SVG, vector to raster, convert SVG online">
-
-    <!-- Korean (한국어) -->
-    <meta name="title.ko" content="SVG to PNG 변환기 - 무료 온라인 도구 | SVG를 PNG, JPEG, WebP로 변환">
-    <meta name="description.ko" content="무료 온라인 SVG to PNG 변환기. 브라우저에서 직접 SVG 파일을 PNG, JPEG, WebP 이미지로 변환하세요. 서버 업로드 불필요, 100% 안전. 일괄 변환, 배율 조절, 투명 배경 지원.">
-    <meta name="keywords.ko" content="SVG to PNG, SVG 변환, 이미지 변환, 무료 온라인 도구, SVG JPEG 변환, SVG WebP 변환, 일괄 변환, 벡터 이미지 변환">
-
-    <!-- Chinese Traditional (繁體中文) -->
-    <meta name="title.zh" content="SVG 轉 PNG 轉換器 - 免費線上工具 | 將 SVG 轉換為 PNG、JPEG、WebP">
-    <meta name="description.zh" content="免費線上 SVG 轉 PNG 轉換器。直接在瀏覽器中將 SVG 檔案轉換為 PNG、JPEG、WebP 圖片。無需上傳伺服器，100% 安全。支援批次轉換、縮放調整、透明背景。">
-    <meta name="keywords.zh" content="SVG轉PNG, SVG轉換, 圖片轉換, 免費線上工具, SVG轉JPEG, SVG轉WebP, 批次轉換SVG, 向量圖轉換">
 
     <!-- Common Meta Tags -->
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -716,6 +705,39 @@
         (function() {
             'use strict';
 
+            // ===== Multi-language SEO data for <title> and <meta name="description"> =====
+            // These are dynamically updated by setLanguage() so search engines
+            // serving the page in a particular language see the correct title/description.
+            const seoData = {
+                en: {
+                    pageTitle: 'SVG to PNG Converter - Free Online Tool | Convert SVG to PNG, JPEG, WebP',
+                    pageDescription: 'Free online SVG to PNG converter. Convert SVG files to PNG, JPEG, or WebP images directly in your browser. No upload required, 100% private and secure. Supports batch conversion, adjustable scale, and transparent backgrounds.',
+                    ogTitle: 'SVG to PNG Converter - Free Online Tool',
+                    ogDescription: 'Convert SVG files to PNG, JPEG, or WebP images directly in your browser. 100% private, no server upload required.',
+                    twitterTitle: 'SVG to PNG Converter - Free Online Tool',
+                    twitterDescription: 'Convert SVG files to PNG, JPEG, or WebP images directly in your browser. 100% private, no server upload required.',
+                    htmlLang: 'en',
+                },
+                ko: {
+                    pageTitle: 'SVG to PNG 변환기 - 무료 온라인 도구 | SVG를 PNG, JPEG, WebP로 변환',
+                    pageDescription: '무료 온라인 SVG to PNG 변환기. 브라우저에서 직접 SVG 파일을 PNG, JPEG, WebP 이미지로 변환하세요. 서버 업로드 불필요, 100% 안전. 일괄 변환, 배율 조절, 투명 배경 지원.',
+                    ogTitle: 'SVG to PNG 변환기 - 무료 온라인 도구',
+                    ogDescription: '브라우저에서 직접 SVG 파일을 PNG, JPEG, WebP 이미지로 변환하세요. 100% 안전, 서버 업로드 불필요.',
+                    twitterTitle: 'SVG to PNG 변환기 - 무료 온라인 도구',
+                    twitterDescription: '브라우저에서 직접 SVG 파일을 PNG, JPEG, WebP 이미지로 변환하세요. 100% 안전, 서버 업로드 불필요.',
+                    htmlLang: 'ko',
+                },
+                zh: {
+                    pageTitle: 'SVG 轉 PNG 轉換器 - 免費線上工具 | 將 SVG 轉換為 PNG、JPEG、WebP',
+                    pageDescription: '免費線上 SVG 轉 PNG 轉換器。直接在瀏覽器中將 SVG 檔案轉換為 PNG、JPEG、WebP 圖片。無需上傳伺服器，100% 安全。支援批次轉換、縮放調整、透明背景。',
+                    ogTitle: 'SVG 轉 PNG 轉換器 - 免費線上工具',
+                    ogDescription: '直接在瀏覽器中將 SVG 檔案轉換為 PNG、JPEG、WebP 圖片。100% 安全，無需上傳伺服器。',
+                    twitterTitle: 'SVG 轉 PNG 轉換器 - 免費線上工具',
+                    twitterDescription: '直接在瀏覽器中將 SVG 檔案轉換為 PNG、JPEG、WebP 圖片。100% 安全，無需上傳伺服器。',
+                    htmlLang: 'zh',
+                }
+            };
+
             // ===== Translations =====
             const translations = {
                 ko: {
@@ -859,6 +881,44 @@
                 return value;
             }
 
+            // ===== SEO Meta Update =====
+            // Dynamically updates <title>, <meta name="description">, OG, Twitter,
+            // and <html lang> so crawlers index the correct language version.
+            function updateSEOMeta(lang) {
+                const data = seoData[lang];
+                if (!data) return;
+
+                // Page title (most important for search results!)
+                document.title = data.pageTitle;
+
+                // Meta description (shown under title in search results)
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) {
+                    metaDesc.setAttribute('content', data.pageDescription);
+                } else {
+                    // Create it if it doesn't exist (safety fallback)
+                    const newMeta = document.createElement('meta');
+                    newMeta.name = 'description';
+                    newMeta.content = data.pageDescription;
+                    document.head.appendChild(newMeta);
+                }
+
+                // Open Graph tags (for Facebook, KakaoTalk, LINE, etc.)
+                const ogTitle = document.querySelector('meta[property="og:title"]');
+                const ogDesc = document.querySelector('meta[property="og:description"]');
+                if (ogTitle) ogTitle.setAttribute('content', data.ogTitle);
+                if (ogDesc) ogDesc.setAttribute('content', data.ogDescription);
+
+                // Twitter Card tags
+                const twTitle = document.querySelector('meta[property="twitter:title"]');
+                const twDesc = document.querySelector('meta[property="twitter:description"]');
+                if (twTitle) twTitle.setAttribute('content', data.twitterTitle);
+                if (twDesc) twDesc.setAttribute('content', data.twitterDescription);
+
+                // HTML lang attribute
+                document.documentElement.lang = data.htmlLang;
+            }
+
             function applyTranslations() {
                 // Update all elements with data-i18n attribute
                 document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -886,6 +946,11 @@
                 if (lang === currentLang) return;
                 if (!translations[lang]) return;
                 currentLang = lang;
+
+                // Update SEO-critical meta tags for the selected language
+                updateSEOMeta(lang);
+
+                // Update UI text
                 applyTranslations();
             }
 

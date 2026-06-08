@@ -1,6 +1,10 @@
 name = "svg-to-png-converter"
 compatibility_date = "2024-01-01"
 
+# Cloudflare Pages automatically detects functions/ directory
+# Functions use v2 compatibility flags for HTMLRewriter support
+compatibility_flags = ["html_rewriter_treats_esi_include_as_void_tag"]
+
 [pages]
 build_command = ""
 build_output_dir = "."
