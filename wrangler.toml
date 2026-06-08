@@ -1,0 +1,6 @@
+name = "svg-to-png-converter"
+compatibility_date = "2024-01-01"
+
+[pages]
+build_command = ""
+build_output_dir = "."
