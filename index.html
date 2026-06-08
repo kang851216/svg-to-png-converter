@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>SVG to PNG Converter - Free Online Tool | Convert SVG to PNG, JPEG, WebP</title>
+    <meta name="title" content="SVG to PNG Converter - Free Online Tool">
+    <meta name="description" content="Free online SVG to PNG converter. Convert SVG files to PNG, JPEG, or WebP images directly in your browser. No upload required, 100% private and secure. Supports batch conversion, adjustable scale, and transparent backgrounds.">
+    <meta name="keywords" content="SVG to PNG, SVG converter, image converter, free online tool, SVG to JPEG, SVG to WebP, batch convert SVG">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="SVG to PNG Converter">
+    <meta name="theme-color" content="#667eea">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://svg-to-png-4sv.pages.dev/">
+    <meta property="og:title" content="SVG to PNG Converter - Free Online Tool">
+    <meta property="og:description" content="Convert SVG files to PNG, JPEG, or WebP images directly in your browser. 100% private, no server upload required.">
+    <meta property="og:image" content="https://svg-to-png-4sv.pages.dev/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://svg-to-png-4sv.pages.dev/">
+    <meta property="twitter:title" content="SVG to PNG Converter - Free Online Tool">
+    <meta property="twitter:description" content="Convert SVG files to PNG, JPEG, or WebP images directly in your browser. 100% private, no server upload required.">
+    <meta property="twitter:image" content="https://svg-to-png-4sv.pages.dev/og-image.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://svg-to-png-4sv.pages.dev/">
+
+    <!-- Robots & Sitemap -->
+    <link rel="robots" href="/robots.txt">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "SVG to PNG Converter",
+        "url": "https://svg-to-png-4sv.pages.dev/",
+        "description": "Free online SVG to PNG converter. Convert SVG files to PNG, JPEG, or WebP images directly in your browser. No upload required, 100% private.",
+        "applicationCategory": "Multimedia",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "SVG to PNG Converter"
+        }
+    }
+    </script>
+
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://svg-to-png-4sv.pages.dev/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "SVG to PNG Converter",
+                "item": "https://svg-to-png-4sv.pages.dev/"
+            }
+        ]
+    }
+    </script>
+
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How to convert SVG to PNG?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Simply drag and drop your SVG files onto the upload area or click to select files. Adjust the scale and background options, then click 'Convert'. Download your PNG files instantly."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is SVG to PNG converter free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, this SVG to PNG converter is completely free to use with no limitations on file size or number of conversions."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are my files uploaded to a server?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. All processing is done entirely in your browser. Your SVG files are never uploaded to any server, ensuring complete privacy and security."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What formats are supported?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can convert SVG to PNG, JPEG, and WebP formats. You can also adjust the scale factor and choose between solid background or transparent background."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I convert multiple SVG files at once?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, you can select multiple SVG files and convert them all at once. Each file will be processed individually and you can download them all together."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .header-title {
+            flex: 1;
+        }
+
+        .header-title h1 {
+            color: #333;
+            font-size: 28px;
+        }
+
+        .header-title .subtitle {
+            color: #888;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        .lang-selector {
+            display: flex;
+            gap: 4px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            padding: 3px;
+            flex-shrink: 0;
+        }
+
+        .lang-btn {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            background: transparent;
+            color: #999;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            color: #666;
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: #667eea;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .upload-area {
+            border: 3px dashed #ddd;
+            border-radius: 16px;
+            padding: 50px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #fafafa;
+            position: relative;
+        }
+
+        .upload-area:hover,
+        .upload-area.dragover {
+            border-color: #667eea;
+            background: #f0f2ff;
+        }
+
+        .upload-area .icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .upload-area p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .upload-area .hint {
+            color: #aaa;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        .upload-area input[type="file"] {
+            display: none;
+        }
+
+        .preview-section {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .preview-section.active {
+            display: block;
+        }
+
+        .preview-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .preview-box {
+            flex: 1;
+            min-width: 250px;
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .preview-box h3 {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .preview-box .preview-content {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+            overflow: hidden;
+        }
+
+        .preview-box .preview-content svg {
+            max-width: 100%;
+            max-height: 300px;
+        }
+
+        .preview-box .preview-content img {
+            max-width: 100%;
+            max-height: 300px;
+        }
+
+        .file-info {
+            margin-top: 16px;
+            padding: 12px 16px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .file-info span {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .options-section {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 12px;
+        }
+
+        .options-section h3 {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .option-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .option-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .option-group label {
+            font-size: 13px;
+            color: #666;
+            white-space: nowrap;
+        }
+
+        .option-group input[type="number"] {
+            width: 80px;
+            padding: 6px 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 13px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .option-group input[type="number"]:focus {
+            border-color: #667eea;
+        }
+
+        .option-group select {
+            padding: 6px 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 13px;
+            outline: none;
+            background: white;
+            cursor: pointer;
+        }
+
+        .option-group select:focus {
+            border-color: #667eea;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            flex: 1;
+            min-width: 140px;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .btn-secondary {
+            background: #eee;
+            color: #666;
+        }
+
+        .btn-secondary:hover {
+            background: #ddd;
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #43e97b, #38f9d7);
+            color: white;
+        }
+
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(67, 233, 123, 0.4);
+        }
+
+        .btn-danger {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #ee5a5a;
+        }
+
+        .status-message {
+            margin-top: 16px;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            display: none;
+        }
+
+        .status-message.error {
+            display: block;
+            background: #fff0f0;
+            color: #d63031;
+            border: 1px solid #ffd0d0;
+        }
+
+        .status-message.success {
+            display: block;
+            background: #f0fff4;
+            color: #27ae60;
+            border: 1px solid #d0ffd0;
+        }
+
+        .status-message.info {
+            display: block;
+            background: #f0f4ff;
+            color: #2d6bb8;
+            border: 1px solid #d0e0ff;
+        }
+
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .loading-spinner.active {
+            display: block;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            border: 3px solid #f0f0f0;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-spinner p {
+            color: #888;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        .batch-list {
+            margin-top: 16px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .batch-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 12px;
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        .batch-item .file-name {
+            color: #333;
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .batch-item .file-status {
+            font-size: 12px;
+            margin-left: 8px;
+            white-space: nowrap;
+        }
+
+        .batch-item .file-status.pending {
+            color: #f39c12;
+        }
+
+        .batch-item .file-status.done {
+            color: #27ae60;
+        }
+
+        .batch-item .file-status.error {
+            color: #e74c3c;
+        }
+
+        .batch-item .remove-btn {
+            background: none;
+            border: none;
+            color: #ccc;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 0 4px;
+            margin-left: 8px;
+        }
+
+        .batch-item .remove-btn:hover {
+            color: #e74c3c;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 24px;
+            color: #bbb;
+            font-size: 12px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .header-title h1 {
+                text-align: center;
+                font-size: 22px;
+            }
+
+            .header-title .subtitle {
+                text-align: center;
+            }
+
+            .preview-container {
+                flex-direction: column;
+            }
+
+            .preview-box {
+                min-width: auto;
+            }
+
+            .option-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-title">
+                <h1 data-i18n="title">🖼️ SVG to PNG Converter</h1>
+                <p class="subtitle" data-i18n="subtitle">Convert SVG files to PNG images (processed entirely in your browser)</p>
+            </div>
+            <div class="lang-selector">
+                <button class="lang-btn active" data-lang="en">🇺🇸 EN</button>
+                <button class="lang-btn" data-lang="zh">🇨🇳 中文</button>
+                <button class="lang-btn" data-lang="ko">🇰🇷 KR</button>
+            </div>
+        </div>
+
+        <!-- Upload Area -->
+        <div class="upload-area" id="uploadArea">
+            <div class="icon">📁</div>
+            <p data-i18n="uploadText"><strong>Click to select SVG files</strong> or drag and drop them here</p>
+            <p class="hint" data-i18n="uploadHint">SVG files only (multiple selection supported)</p>
+            <input type="file" id="fileInput" accept=".svg,image/svg+xml" multiple>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="loading-spinner" id="loadingSpinner">
+            <div class="spinner"></div>
+            <p data-i18n="converting">Converting...</p>
+        </div>
+
+        <!-- Status Message -->
+        <div class="status-message" id="statusMessage"></div>
+
+        <!-- Preview Section -->
+        <div class="preview-section" id="previewSection">
+            <!-- Batch List -->
+            <div class="batch-list" id="batchList"></div>
+
+            <!-- Options -->
+            <div class="options-section">
+                <h3 data-i18n="optionsTitle">⚙️ Conversion Options</h3>
+                <div class="option-row">
+                    <div class="option-group">
+                        <label for="scale" data-i18n="scaleLabel">Scale:</label>
+                        <input type="number" id="scale" value="2" min="1" max="10" step="0.5">
+                    </div>
+                    <div class="option-group">
+                        <label for="bgColor" data-i18n="bgColorLabel">Background:</label>
+                        <input type="color" id="bgColor" value="#ffffff">
+                    </div>
+                    <div class="option-group">
+                        <label for="bgTransparent" data-i18n="transparentLabel">Transparent:</label>
+                        <input type="checkbox" id="bgTransparent">
+                    </div>
+                    <div class="option-group">
+                        <label for="format" data-i18n="formatLabel">Format:</label>
+                        <select id="format">
+                            <option value="png">PNG</option>
+                            <option value="jpeg">JPEG</option>
+                            <option value="webp">WebP</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="btn-group">
+                <button class="btn btn-primary" id="convertBtn" data-i18n="convertBtn">🔄 Convert</button>
+                <button class="btn btn-success" id="downloadAllBtn" data-i18n="downloadAllBtn">📥 Download All</button>
+                <button class="btn btn-danger" id="clearBtn" data-i18n="clearBtn">🗑️ Clear</button>
+            </div>
+        </div>
+
+        <div class="footer" data-i18n="footer">
+            SVG to PNG Converter &mdash; All processing is done in your browser. No files are uploaded to any server.
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            'use strict';
+
+            // ===== Translations =====
+            const translations = {
+                ko: {
+                    title: '🖼️ SVG to PNG Converter',
+                    subtitle: 'SVG 파일을 PNG 이미지로 변환하세요 (브라우저에서 직접 처리)',
+                    uploadText: '<strong>클릭하여 SVG 파일 선택</strong> 또는 파일을 드래그하여 놓으세요',
+                    uploadHint: 'SVG 파일만 가능 (다중 선택 지원)',
+                    converting: '변환 중...',
+                    optionsTitle: '⚙️ 변환 옵션',
+                    scaleLabel: '배율:',
+                    bgColorLabel: '배경색:',
+                    transparentLabel: '투명 배경:',
+                    formatLabel: '포맷:',
+                    convertBtn: '🔄 변환하기',
+                    downloadAllBtn: '📥 모두 다운로드',
+                    clearBtn: '🗑️ 초기화',
+                    footer: 'SVG to PNG Converter &mdash; 모든 처리는 브라우저에서 이루어집니다. 파일이 서버로 전송되지 않습니다.',
+                    // Dynamic messages
+                    notSvgFile: (name) => `"${name}"은(는) SVG 파일이 아닙니다.`,
+                    invalidSvg: (name) => `"${name}"은(는) 유효한 SVG 파일이 아닙니다.`,
+                    fileReadError: (name) => `파일을 읽을 수 없습니다: ${name}`,
+                    filesAdded: (count) => `${count}개의 SVG 파일이 추가되었습니다.`,
+                    noFilesToConvert: '변환할 파일이 없습니다.',
+                    scaleRangeError: '배율은 0.1 ~ 20 사이의 값이어야 합니다.',
+                    convertSuccess: (count) => `${count}개 파일 변환 완료!`,
+                    convertPartial: (success, fail) => `${success}개 성공, ${fail}개 실패`,
+                    convertAllFailed: '모든 파일 변환에 실패했습니다.',
+                    noFilesToDownload: '다운로드할 변환된 파일이 없습니다.',
+                    downloadStarted: (count) => `${count}개 파일 다운로드 시작됨`,
+                    svgNotFound: 'SVG 요소를 찾을 수 없습니다.',
+                    svgLoadError: 'SVG를 이미지로 로드할 수 없습니다.',
+                    // Status labels
+                    statusPending: '대기 중',
+                    statusDone: '✅ 변환 완료',
+                    statusError: '❌ 오류',
+                    removeTitle: '제거',
+                },
+                en: {
+                    title: '🖼️ SVG to PNG Converter',
+                    subtitle: 'Convert SVG files to PNG images (processed entirely in your browser)',
+                    uploadText: '<strong>Click to select SVG files</strong> or drag and drop them here',
+                    uploadHint: 'SVG files only (multiple selection supported)',
+                    converting: 'Converting...',
+                    optionsTitle: '⚙️ Conversion Options',
+                    scaleLabel: 'Scale:',
+                    bgColorLabel: 'Background:',
+                    transparentLabel: 'Transparent:',
+                    formatLabel: 'Format:',
+                    convertBtn: '🔄 Convert',
+                    downloadAllBtn: '📥 Download All',
+                    clearBtn: '🗑️ Clear',
+                    footer: 'SVG to PNG Converter &mdash; All processing is done in your browser. No files are uploaded to any server.',
+                    // Dynamic messages
+                    notSvgFile: (name) => `"${name}" is not an SVG file.`,
+                    invalidSvg: (name) => `"${name}" is not a valid SVG file.`,
+                    fileReadError: (name) => `Cannot read file: ${name}`,
+                    filesAdded: (count) => `${count} SVG file(s) added.`,
+                    noFilesToConvert: 'No files to convert.',
+                    scaleRangeError: 'Scale must be between 0.1 and 20.',
+                    convertSuccess: (count) => `${count} file(s) converted successfully!`,
+                    convertPartial: (success, fail) => `${success} succeeded, ${fail} failed`,
+                    convertAllFailed: 'All files failed to convert.',
+                    noFilesToDownload: 'No converted files to download.',
+                    downloadStarted: (count) => `Downloading ${count} file(s)`,
+                    svgNotFound: 'Could not find SVG element.',
+                    svgLoadError: 'Could not load SVG as image.',
+                    // Status labels
+                    statusPending: 'Pending',
+                    statusDone: '✅ Done',
+                    statusError: '❌ Error',
+                    removeTitle: 'Remove',
+                },
+                zh: {
+                    title: '🖼️ SVG 轉 PNG 轉換器',
+                    subtitle: '將 SVG 檔案轉換為 PNG 圖片（在瀏覽器中直接處理）',
+                    uploadText: '<strong>點擊選擇 SVG 檔案</strong> 或拖放檔案到此處',
+                    uploadHint: '僅支援 SVG 檔案（支援多選）',
+                    converting: '轉換中...',
+                    optionsTitle: '⚙️ 轉換選項',
+                    scaleLabel: '縮放:',
+                    bgColorLabel: '背景色:',
+                    transparentLabel: '透明背景:',
+                    formatLabel: '格式:',
+                    convertBtn: '🔄 轉換',
+                    downloadAllBtn: '📥 全部下載',
+                    clearBtn: '🗑️ 清空',
+                    footer: 'SVG 轉 PNG 轉換器 &mdash; 所有處理均在瀏覽器中完成。檔案不會上傳到任何伺服器。',
+                    // Dynamic messages
+                    notSvgFile: (name) => `"${name}" 不是 SVG 檔案。`,
+                    invalidSvg: (name) => `"${name}" 不是有效的 SVG 檔案。`,
+                    fileReadError: (name) => `無法讀取檔案: ${name}`,
+                    filesAdded: (count) => `已新增 ${count} 個 SVG 檔案。`,
+                    noFilesToConvert: '沒有要轉換的檔案。',
+                    scaleRangeError: '縮放值必須在 0.1 到 20 之間。',
+                    convertSuccess: (count) => `${count} 個檔案轉換完成！`,
+                    convertPartial: (success, fail) => `${success} 個成功，${fail} 個失敗`,
+                    convertAllFailed: '所有檔案轉換失敗。',
+                    noFilesToDownload: '沒有已轉換的檔案可下載。',
+                    downloadStarted: (count) => `開始下載 ${count} 個檔案`,
+                    svgNotFound: '找不到 SVG 元素。',
+                    svgLoadError: '無法將 SVG 載入為圖像。',
+                    // Status labels
+                    statusPending: '等待中',
+                    statusDone: '✅ 完成',
+                    statusError: '❌ 錯誤',
+                    removeTitle: '移除',
+                }
+            };
+
+            // ===== DOM Elements =====
+            const uploadArea = document.getElementById('uploadArea');
+            const fileInput = document.getElementById('fileInput');
+            const previewSection = document.getElementById('previewSection');
+            const batchList = document.getElementById('batchList');
+            const convertBtn = document.getElementById('convertBtn');
+            const downloadAllBtn = document.getElementById('downloadAllBtn');
+            const clearBtn = document.getElementById('clearBtn');
+            const statusMessage = document.getElementById('statusMessage');
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            const scaleInput = document.getElementById('scale');
+            const bgColorInput = document.getElementById('bgColor');
+            const bgTransparentCheck = document.getElementById('bgTransparent');
+            const formatSelect = document.getElementById('format');
+            const langBtns = document.querySelectorAll('.lang-btn');
+
+            // ===== State =====
+            let svgFiles = [];
+            let currentLang = 'en';
+
+            // ===== i18n Functions =====
+            function t(key, ...args) {
+                const langData = translations[currentLang];
+                if (!langData || !langData[key]) return key;
+                const value = langData[key];
+                if (typeof value === 'function') {
+                    return value(...args);
+                }
+                return value;
+            }
+
+            function applyTranslations() {
+                // Update all elements with data-i18n attribute
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.dataset.i18n;
+                    const translation = t(key);
+                    if (translation && translation !== key) {
+                        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                            el.placeholder = translation;
+                        } else {
+                            el.innerHTML = translation;
+                        }
+                    }
+                });
+
+                // Update language button active state
+                langBtns.forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.lang === currentLang);
+                });
+
+                // Re-render batch list to update status texts
+                renderBatchList();
+            }
+
+            function setLanguage(lang) {
+                if (lang === currentLang) return;
+                if (!translations[lang]) return;
+                currentLang = lang;
+                applyTranslations();
+            }
+
+            // ===== Utility Functions =====
+            function showStatus(message, type = 'info') {
+                statusMessage.className = 'status-message ' + type;
+                statusMessage.innerHTML = message;
+                statusMessage.style.display = 'block';
+            }
+
+            function hideStatus() {
+                statusMessage.style.display = 'none';
+                statusMessage.className = 'status-message';
+            }
+
+            function showLoading(show) {
+                loadingSpinner.classList.toggle('active', show);
+            }
+
+            function generateId() {
+                return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
+            }
+
+            function readSVGFile(file) {
+                return new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onload = (e) => resolve(e.target.result);
+                    reader.onerror = () => reject(new Error(t('fileReadError', file.name)));
+                    reader.readAsText(file);
+                });
+            }
+
+            function escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+
+            // ===== Batch List Rendering =====
+            function renderBatchList() {
+                if (svgFiles.length === 0) {
+                    previewSection.classList.remove('active');
+                    return;
+                }
+
+                previewSection.classList.add('active');
+
+                let html = '';
+                svgFiles.forEach((item, index) => {
+                    const statusText = item.status === 'pending' ? t('statusPending') :
+                                       item.status === 'done' ? t('statusDone') :
+                                       item.status === 'error' ? t('statusError') : t('statusPending');
+                    const statusClass = item.status === 'done' ? 'done' :
+                                        item.status === 'error' ? 'error' : 'pending';
+                    html += `
+                        <div class="batch-item">
+                            <span class="file-name" title="${escapeHtml(item.name)}">${escapeHtml(item.name)}</span>
+                            <span class="file-status ${statusClass}">${statusText}</span>
+                            <button class="remove-btn" data-index="${index}" title="${escapeHtml(t('removeTitle'))}">×</button>
+                        </div>
+                    `;
+                });
+                batchList.innerHTML = html;
+
+                batchList.querySelectorAll('.remove-btn').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const idx = parseInt(this.dataset.index);
+                        svgFiles.splice(idx, 1);
+                        renderBatchList();
+                        if (svgFiles.length === 0) {
+                            hideStatus();
+                        }
+                    });
+                });
+            }
+
+            // ===== File Handling =====
+            async function addFiles(files) {
+                const validFiles = Array.from(files).filter(file => {
+                    const isSVG = file.type === 'image/svg+xml' ||
+                                  file.name.toLowerCase().endsWith('.svg');
+                    if (!isSVG) {
+                        showStatus(t('notSvgFile', file.name), 'error');
+                    }
+                    return isSVG;
+                });
+
+                if (validFiles.length === 0) return;
+
+                showLoading(true);
+                let addedCount = 0;
+
+                for (const file of validFiles) {
+                    try {
+                        const content = await readSVGFile(file);
+                        if (!content.trim().toLowerCase().includes('<svg')) {
+                            showStatus(t('invalidSvg', file.name), 'error');
+                            continue;
+                        }
+                        svgFiles.push({
+                            id: generateId(),
+                            file: file,
+                            name: file.name,
+                            svgContent: content,
+                            status: 'pending',
+                            dataUrl: null
+                        });
+                        addedCount++;
+                    } catch (err) {
+                        showStatus(err.message, 'error');
+                    }
+                }
+
+                showLoading(false);
+                renderBatchList();
+
+                if (addedCount > 0) {
+                    showStatus(t('filesAdded', addedCount), 'success');
+                }
+            }
+
+            // ===== SVG Conversion =====
+            function convertSVG(svgContent, options) {
+                return new Promise((resolve, reject) => {
+                    const { scale, bgColor, transparent, format } = options;
+
+                    const tempDiv = document.createElement('div');
+                    tempDiv.style.position = 'absolute';
+                    tempDiv.style.left = '-9999px';
+                    tempDiv.style.top = '-9999px';
+                    tempDiv.innerHTML = svgContent;
+                    document.body.appendChild(tempDiv);
+
+                    const svgElement = tempDiv.querySelector('svg');
+                    if (!svgElement) {
+                        document.body.removeChild(tempDiv);
+                        reject(new Error(t('svgNotFound')));
+                        return;
+                    }
+
+                    const svgRect = svgElement.getBoundingClientRect();
+                    let width = parseInt(svgElement.getAttribute('width'));
+                    let height = parseInt(svgElement.getAttribute('height'));
+
+                    if (!width || !height) {
+                        const viewBox = svgElement.getAttribute('viewBox');
+                        if (viewBox) {
+                            const parts = viewBox.split(/[\s,]+/).map(Number);
+                            if (parts.length === 4) {
+                                width = parts[2];
+                                height = parts[3];
+                            }
+                        }
+                    }
+
+                    if (!width || !height || width === 0 || height === 0) {
+                        width = svgRect.width || 300;
+                        height = svgRect.height || 150;
+                    }
+
+                    const serializer = new XMLSerializer();
+                    let svgString = serializer.serializeToString(svgElement);
+
+                    document.body.removeChild(tempDiv);
+
+                    if (!svgString.includes('xmlns="http://www.w3.org/2000/svg"')) {
+                        svgString = svgString.replace('<svg', '<svg xmlns="http://www.w3.org/2000/svg"');
+                    }
+
+                    const svgBlob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
+                    const url = URL.createObjectURL(svgBlob);
+
+                    const img = new Image();
+                    img.onload = () => {
+                        const outputWidth = Math.round(width * scale);
+                        const outputHeight = Math.round(height * scale);
+
+                        const canvas = document.createElement('canvas');
+                        canvas.width = outputWidth;
+                        canvas.height = outputHeight;
+                        const ctx = canvas.getContext('2d');
+
+                        if (!transparent) {
+                            ctx.fillStyle = bgColor;
+                            ctx.fillRect(0, 0, outputWidth, outputHeight);
+                        }
+
+                        ctx.drawImage(img, 0, 0, outputWidth, outputHeight);
+
+                        let mimeType;
+                        if (format === 'jpeg') {
+                            mimeType = 'image/jpeg';
+                        } else if (format === 'webp') {
+                            mimeType = 'image/webp';
+                        } else {
+                            mimeType = 'image/png';
+                        }
+
+                        const dataUrl = canvas.toDataURL(mimeType, 0.92);
+                        URL.revokeObjectURL(url);
+
+                        resolve({
+                            dataUrl: dataUrl,
+                            width: outputWidth,
+                            height: outputHeight,
+                            format: format
+                        });
+                    };
+
+                    img.onerror = () => {
+                        URL.revokeObjectURL(url);
+                        reject(new Error(t('svgLoadError')));
+                    };
+
+                    img.src = url;
+                });
+            }
+
+            // ===== Conversion Logic =====
+            async function convertAll() {
+                const pendingItems = svgFiles.filter(item => item.status === 'pending');
+                if (pendingItems.length === 0) {
+                    showStatus(t('noFilesToConvert'), 'info');
+                    return;
+                }
+
+                const scale = parseFloat(scaleInput.value) || 2;
+                const bgColor = bgColorInput.value;
+                const transparent = bgTransparentCheck.checked;
+                const format = formatSelect.value;
+
+                if (scale < 0.1 || scale > 20) {
+                    showStatus(t('scaleRangeError'), 'error');
+                    return;
+                }
+
+                showLoading(true);
+                hideStatus();
+
+                let successCount = 0;
+                let errorCount = 0;
+
+                for (const item of pendingItems) {
+                    try {
+                        const result = await convertSVG(item.svgContent, {
+                            scale: scale,
+                            bgColor: bgColor,
+                            transparent: transparent,
+                            format: format
+                        });
+
+                        item.status = 'done';
+                        item.dataUrl = result.dataUrl;
+                        item.resultFormat = result.format;
+                        item.resultWidth = result.width;
+                        item.resultHeight = result.height;
+                        successCount++;
+                        renderBatchList();
+                    } catch (err) {
+                        item.status = 'error';
+                        errorCount++;
+                        renderBatchList();
+                        console.error('Conversion error:', err);
+                    }
+                }
+
+                showLoading(false);
+                renderBatchList();
+
+                if (successCount > 0 && errorCount === 0) {
+                    showStatus(t('convertSuccess', successCount), 'success');
+                } else if (successCount > 0 && errorCount > 0) {
+                    showStatus(t('convertPartial', successCount, errorCount), 'error');
+                } else {
+                    showStatus(t('convertAllFailed'), 'error');
+                }
+            }
+
+            // ===== Download Functions =====
+            function downloadFile(item) {
+                if (item.status !== 'done' || !item.dataUrl) return;
+
+                const ext = item.resultFormat === 'jpeg' ? 'jpg' : item.resultFormat || 'png';
+                const baseName = item.name.replace(/\.svg$/i, '');
+                const fileName = `${baseName}.${ext}`;
+
+                const link = document.createElement('a');
+                link.href = item.dataUrl;
+                link.download = fileName;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+
+            function downloadAll() {
+                const doneItems = svgFiles.filter(item => item.status === 'done');
+                if (doneItems.length === 0) {
+                    showStatus(t('noFilesToDownload'), 'info');
+                    return;
+                }
+
+                doneItems.forEach(item => downloadFile(item));
+                showStatus(t('downloadStarted', doneItems.length), 'success');
+            }
+
+            // ===== Clear =====
+            function clearAll() {
+                svgFiles = [];
+                renderBatchList();
+                hideStatus();
+                fileInput.value = '';
+            }
+
+            // ===== Event Listeners =====
+
+            // Language buttons
+            langBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    setLanguage(btn.dataset.lang);
+                });
+            });
+
+            // Upload area click
+            uploadArea.addEventListener('click', () => {
+                fileInput.click();
+            });
+
+            // File input change
+            fileInput.addEventListener('change', (e) => {
+                if (e.target.files.length > 0) {
+                    addFiles(e.target.files);
+                }
+                fileInput.value = '';
+            });
+
+            // Drag and drop
+            uploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                uploadArea.classList.add('dragover');
+            });
+
+            uploadArea.addEventListener('dragleave', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                uploadArea.classList.remove('dragover');
+            });
+
+            uploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                uploadArea.classList.remove('dragover');
+
+                if (e.dataTransfer.files.length > 0) {
+                    addFiles(e.dataTransfer.files);
+                }
+            });
+
+            // Convert button
+            convertBtn.addEventListener('click', convertAll);
+
+            // Download all button
+            downloadAllBtn.addEventListener('click', downloadAll);
+
+            // Clear button
+            clearBtn.addEventListener('click', clearAll);
+
+            // Transparent checkbox toggle
+            bgTransparentCheck.addEventListener('change', function() {
+                bgColorInput.disabled = this.checked;
+                if (this.checked) {
+                    bgColorInput.style.opacity = '0.5';
+                } else {
+                    bgColorInput.style.opacity = '1';
+                }
+            });
+
+            // Keyboard shortcut: Ctrl+Enter to convert
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+                    e.preventDefault();
+                    convertAll();
+                }
+            });
+
+            console.log('SVG to PNG Converter initialized');
+        })();
+    </script>
+</body>
+</html>
